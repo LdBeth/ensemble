@@ -1,0 +1,12 @@
+OCAMLINCLUDES += ../util ../socket
+
+FILES[] =
+    buf
+    iovec
+    iovecl
+    iq
+
+OCamlLibrary(mm, $(FILES))
+
+clean:
+    $(CLEAN)

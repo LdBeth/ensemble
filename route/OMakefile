@@ -1,0 +1,7 @@
+OCAMLINCLUDES += ../util ../mm ../type ../infr
+
+FILES[] =
+    handler
+    route
+
+OCamlLibrary(route, $(FILES))

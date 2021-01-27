@@ -1,0 +1,4 @@
+OCAMLINCLUDES += ../socket ../util ../mm ../type ../route
+
+clean:
+    $(CLEAN)

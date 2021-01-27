@@ -1,0 +1,21 @@
+OCAMLINCLUDES += ../util ../mm ../route ../infr
+
+FILES[] =
+    time
+    addr
+    version
+    security
+    proto
+    stack_id
+    unique
+    endpt
+    group
+    param
+    view
+    conn
+
+
+OCamlLibrary(type, $(FILES))
+
+clean:
+    $(CLEAN)

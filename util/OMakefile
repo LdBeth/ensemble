@@ -1,0 +1,24 @@
+OCAMLINCLUDES += ../socket ../mm
+
+FILES[] =
+    trans
+    util
+    queuee
+    trace
+    arraye
+    arrayf
+    fqueue
+    queuea
+    lset
+    once
+    priq
+    resource
+    sched
+    tree
+    mrekey_dt
+    arrayop
+
+OCamlLibrary(util, $(FILES))
+
+clean:
+    $(CLEAN)

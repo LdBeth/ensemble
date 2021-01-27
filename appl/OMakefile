@@ -1,0 +1,4 @@
+OCAMLINCLUDES += ../socket ../util ../mm ../type ../route ../infr ../groupd
+
+clean:
+    $(CLEAN)

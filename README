@@ -2,3 +2,10 @@ This is a modified version of Ensemble to be used by MetaPRL with
 a recent OCaml compiler.
 
 currently working in progress
+
+The key difference between orginal Ensemble:
+
+1. Only the server files are avaliable, no client library.
+2. Dropped support for Win32 since it isn't likely to be used.
+3. Dropped MD5 and crypto, since they're just stubs if dependecies are not avaliable.
+

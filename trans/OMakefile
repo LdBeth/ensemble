@@ -1,0 +1,4 @@
+OCAMLINCLUDES += ../util ../mm ../type ../route ../appl
+
+clean:
+    $(CLEAN)

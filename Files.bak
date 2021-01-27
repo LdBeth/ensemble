@@ -1,0 +1,133 @@
+#*************************************************************#
+# Core Ensemble stuff
+
+ENSCORE_FILES[] =
+    util/trans
+    util/util
+    util/queuee
+    util/trace
+    util/arraye
+    util/arrayf
+    mm/buf
+    mm/iovec
+    mm/iovecl
+    util/hsys
+    util/fqueue
+    util/queuea
+    util/lset
+    util/once
+    util/priq
+    util/resource
+    util/sched
+
+    mm/iq
+    util/marsh
+    type/time
+    type/addr
+    type/version
+
+    type/security
+    type/shared
+    util/tree
+    util/mrekey_dt
+
+    type/proto
+    type/stack_id
+    type/unique
+    type/endpt
+    type/group
+    type/param
+    type/view
+    type/conn
+    route/handler
+    route/route
+    infr/async
+    type/alarm
+    type/auth
+    type/domain
+    type/event
+    type/property
+    type/appl_intf
+    type/appl_handle
+    type/layer
+
+    infr/transport
+
+    route/unsigned
+    route/signed
+
+    infr/config_trans
+    infr/glue
+    appl/arge
+    infr/stacke
+    appl/timestamp
+
+    trans/ipmc
+    trans/udp
+    trans/real
+
+    route/bypassr
+    infr/hsyssupp
+    trans/netsim
+
+    appl/pgp
+    util/arrayop
+    appl/appl_debug
+    appl/appl_aggr
+    appl/appl_power
+    appl/appl_lwe
+    appl/appl_multi
+    appl/handle
+    appl/partition
+
+    appl/protos
+
+    groupd/mutil
+    groupd/proxy
+    groupd/member
+    groupd/coord
+    groupd/actual
+    groupd/manage
+    appl/appl
+
+    appl/reflect
+
+    # $(ENSLIB)/ensemble
+
+#*************************************************************#
+# These are an almost minimal set of additional modules to link with
+# the core library.  They do not include many of the optional
+# features of ensemble such as the various servers and debugging
+# capabilities.  Only layers needed for vsync and vsync+total
+# protocol stacks are included here.
+
+ENSMINOBJ[] =
+    layers/other/top_appl
+    layers/other/top
+    layers/other/partial_appl
+    layers/trans/stable
+    layers/trans/bottom
+    layers/trans/mnak
+    layers/trans/pt2pt
+    layers/vsync/suspect
+    layers/vsync/fz_suspect
+    layers/vsync/fz_detect
+    layers/vsync/fz_decide
+    layers/vsync/merge
+    layers/vsync/inter
+    layers/vsync/intra
+    layers/vsync/elect
+    layers/trans/frag
+    layers/trans/frag_abv
+    layers/vsync/leave
+    layers/vsync/sync
+    layers/vsync/vsync
+    layers/vsync/slander
+    layers/gossip/heal
+    layers/flow/pt2ptw
+    layers/flow/pt2ptwp
+    util/mcredit
+    layers/flow/mflow
+    layers/total/sequencer
+
+    layers/bypass/fpmb

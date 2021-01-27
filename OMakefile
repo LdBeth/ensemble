@@ -4,9 +4,13 @@
 open build/C
 open build/Common
 
-FILES[] =
+# FILES[] =
 
 USE_OCAMLFIND = false
+
+include Files
+
+OCamlLibrary(libenscore, $(ENSCORE_FILES))
 
 #
 # Configuration
@@ -26,4 +30,4 @@ CLEAN = rm -rf *.cm* *~ .\#* *.o *.obj *.a *.lib *.exe *.omc *.tmp
 #
 # Subdirectories of this project
 #
-.SUBDIRS: socket
+.SUBDIRS: socket mm util type route infr appl trans groupd
