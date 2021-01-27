@@ -1,0 +1,29 @@
+#
+# Include files from subdirectories
+#
+open build/C
+open build/Common
+
+FILES[] =
+
+USE_OCAMLFIND = false
+
+#
+# Configuration
+#
+if $(not $(defined CAMLLIB))
+    CAMLLIB = $(dir $(getenv CAMLLIB, $(getenv OCAMLLIB, $(shell $(OCAMLC) -where))))
+    INCLUDES += $(CAMLLIB)
+    export
+
+if $(not $(defined USE_CIOVEC))
+    USE_CIOVEC = true
+    export
+
+.PHONY: clean realclean
+CLEAN = rm -rf *.cm* *~ .\#* *.o *.obj *.a *.lib *.exe *.omc *.tmp
+
+#
+# Subdirectories of this project
+#
+.SUBDIRS: socket

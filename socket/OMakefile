@@ -1,0 +1,23 @@
+
+S_FILES[]=
+    socksupp
+    ciovec
+    comm_impl
+    socket
+
+U_FILES[]=
+    socksupp
+    socket
+
+if $(USE_CIOVEC)
+    socket.ml: ssocket.ml
+        ln-or-cp $< $@
+
+    OCamlLibrary(socket, $(S_FILES))
+else
+    socket.ml: usocket.ml
+        ln-or-cp $< $@
+
+    OCamlLibrary(socket, $(U_FILES))
+
+.SUBDIRS: libsock

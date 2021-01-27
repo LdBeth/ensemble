@@ -1,0 +1,28 @@
+#
+# Make sure omake is up-to-date
+#
+OMakeVersion(0.9.0)
+
+#
+# Include the standard configuration
+#
+open build/Common
+open build/C
+open build/OCaml
+open build/LaTeX
+open configure/Configure
+
+#
+# Ensemble is standalone
+#
+ENS_STANDALONE = true
+
+#
+# Options
+#
+OCAMLFLAGS += -warn-error Aez-3-37-44-50-67 -w Aez-37-44-50-67
+
+#
+# Include the OMakefile
+#
+.SUBDIRS: .

@@ -1,0 +1,9 @@
+.omakedb*
+*.a
+*.cmi
+*.cmo
+*.cma
+*.cmx
+*.cmxa
+*.o
+*.omc
