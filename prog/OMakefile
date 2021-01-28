@@ -1,0 +1,7 @@
+OCAMLINCLUDES += ../lib
+
+OCAML_CLIBS = ../socket/libsock/libsock
+OCAML_LIBS[] += ../socket/socket ../libenscore
+OCAML_OTHER_LIBS = unix
+
+OCamlProgram(gossip, gossip)

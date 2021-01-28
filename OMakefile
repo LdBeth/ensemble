@@ -12,6 +12,11 @@ include Files
 
 OCamlLibrary(libenscore, $(ENSCORE_FILES))
 
+BYTE_ENABLED = true
+NATIVE_ENABLED = false
+OCAML_LIB_FLAGS += -linkall
+OCAML_LINK_FLAGS += -linkall
+
 #
 # Configuration
 #
@@ -27,7 +32,12 @@ if $(not $(defined USE_CIOVEC))
 .PHONY: clean realclean
 CLEAN = rm -rf *.cm* *~ .\#* *.o *.obj *.a *.lib *.exe *.omc *.tmp
 
+
+ensemble.mli:
+    tools/emrg -mli $(ENSEMBLEMLI) -o $@
+ensemble.ml:
+    tools/emrg -ml $(ENSEMBLEMLI) -o $@
 #
 # Subdirectories of this project
 #
-.SUBDIRS: socket mm util type route infr appl trans groupd
+.SUBDIRS: socket mm util type route infr appl trans groupd prog tools lib

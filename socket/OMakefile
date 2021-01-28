@@ -21,3 +21,6 @@ else
     OCamlLibrary(socket, $(U_FILES))
 
 .SUBDIRS: libsock
+
+clean:
+    $(CLEAN)

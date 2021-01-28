@@ -95,9 +95,9 @@ let read s b o l = Unix.read s b o l
 type sendto_info
 
 type ctx 
-
+(*
 external create_ctx : unit -> ctx 
-  = "skt_Val_create_ctx"
+  = "skt_Val_create_ctx" *)
 
 external sendto_info : 
   Unix.file_descr -> Unix.sockaddr array -> sendto_info

@@ -379,7 +379,7 @@ let [@inline never] install name l =
   let l = (Obj.magic l : ('a,'b,'c) basic) in
   Hashtbl.add layer_table name l
 
-let get name = 
+let get name =
   let name = String.uppercase_ascii name in
   let l = Hashtbl.find layer_table name in
   (Obj.magic l : ('a,'b,'c) basic)

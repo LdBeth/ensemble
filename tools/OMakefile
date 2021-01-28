@@ -1,0 +1,2 @@
+
+OCamlProgramInstall(ens.install, ../bin, emrg, emrg)
