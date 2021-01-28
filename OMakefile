@@ -40,4 +40,4 @@ ensemble.ml:
 #
 # Subdirectories of this project
 #
-.SUBDIRS: socket mm util type route infr appl trans groupd prog tools lib
+.SUBDIRS: socket mm util type route infr appl trans groupd prog tools lib layers

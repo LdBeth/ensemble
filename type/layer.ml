@@ -381,7 +381,8 @@ let [@inline never] install name l =
 
 let get name =
   let name = String.uppercase_ascii name in
-  let l = Hashtbl.find layer_table name in
+  let l = try Hashtbl.find layer_table name
+          with Not_found -> raise (Failure ("layer " ^ name ^ " not found")) in
   (Obj.magic l : ('a,'b,'c) basic)
   
 (*
